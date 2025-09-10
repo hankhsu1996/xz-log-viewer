@@ -2,7 +2,7 @@
   "name": "xz-log-viewer",
   "displayName": "XZ Log Viewer",
   "description": "Automatically decompress and view .xz compressed log files",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.74.0"
@@ -63,8 +63,12 @@
   "publisher": "hankhsu1996",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/xz-log-viewer.git"
+    "url": "https://github.com/hankhsu1996/xz-log-viewer.git"
   },
+  "bugs": {
+    "url": "https://github.com/hankhsu1996/xz-log-viewer/issues"
+  },
+  "homepage": "https://github.com/hankhsu1996/xz-log-viewer",
   "license": "MIT",
   "author": {
     "name": "Shou-Li Hsu",

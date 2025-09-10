@@ -25,4 +25,4 @@ MIT © Shou-Li Hsu
 
 ## Author
 
-Shou-Li Hsu (hank850503@gmail.com)
+Shou-Li Hsu

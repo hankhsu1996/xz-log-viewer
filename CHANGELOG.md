@@ -2,7 +2,7 @@
 
 All notable changes to the "XZ Log Viewer" extension will be documented in this file.
 
-## [0.0.1] - 2025-02-24
+## [1.0.0] - 2025-09-09
 
 ### Added
 - Initial release
