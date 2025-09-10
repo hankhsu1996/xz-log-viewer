@@ -1,0 +1,73 @@
+{
+  "name": "xz-log-viewer",
+  "displayName": "XZ Log Viewer",
+  "description": "Automatically decompress and view .xz compressed log files",
+  "version": "0.0.1",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:*.xz",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "xz-log-viewer.openXZFile",
+        "title": "Open XZ File"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == '.xz'",
+          "command": "xz-log-viewer.openXZFile",
+          "group": "navigation"
+        }
+      ]
+    },
+    "customEditors": [
+      {
+        "viewType": "xz-log-viewer.xz",
+        "displayName": "XZ File Viewer",
+        "selector": [
+          { "filenamePattern": "*.xz" }
+        ],
+        "priority": "default"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "lzma-native": "^8.0.6",
+    "tar-stream": "^3.1.7"
+  },
+  "publisher": "hankhsu1996",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/xz-log-viewer.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Shou-Li Hsu",
+    "email": "hank850503@gmail.com"
+  }
+}
