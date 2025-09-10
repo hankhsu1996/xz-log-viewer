@@ -2,7 +2,7 @@
   "name": "xz-log-viewer",
   "displayName": "XZ Log Viewer",
   "description": "Automatically decompress and view .xz compressed log files",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.74.0"
@@ -16,21 +16,6 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "xz-log-viewer.openXZFile",
-        "title": "Open XZ File"
-      }
-    ],
-    "menus": {
-      "explorer/context": [
-        {
-          "when": "resourceExtname == '.xz'",
-          "command": "xz-log-viewer.openXZFile",
-          "group": "navigation"
-        }
-      ]
-    },
     "customEditors": [
       {
         "viewType": "xz-log-viewer.xz",
@@ -46,7 +31,8 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/node": "20.x",
@@ -54,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.11.0",
     "eslint": "^8.57.0",
+    "prettier": "^3.0.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {

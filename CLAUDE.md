@@ -50,3 +50,18 @@ This is a VS Code extension that enables viewing of compressed .xz and .tar.xz l
 - `.vscode/` - VS Code workspace configuration including launch and tasks
 
 The extension uses VS Code's TextDocumentContentProvider API to create virtual documents that display decompressed content while keeping the original .xz files intact.
+
+## Git Workflow and Branching
+
+**Branch Naming Conventions:**
+- `feature/feature-name` - New functionality or enhancements
+- `bugfix/issue-description` - Bug fixes
+- `chore/task-description` - Maintenance tasks (dependencies, formatting, tooling)
+- `hotfix/critical-fix` - Critical production fixes
+- `release/version-number` - Release preparation (if using gitflow)
+
+**Version Bumping:**
+- Version bumps are typically done within feature branches or directly on main
+- No separate branch needed for version bumps unless complex release process
+- Bump version as part of the feature that warrants the increment
+- Follow semantic versioning: MAJOR.MINOR.PATCH
